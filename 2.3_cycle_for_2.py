@@ -1,5 +1,4 @@
-a = int(input())
-b = int(input())
+a, b = int(input()), int(input())
 
 c, j = 0, 0
 
