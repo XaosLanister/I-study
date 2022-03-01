@@ -1,12 +1,11 @@
 meanings = [int(i) for i in input().split()]
 
-a = ''
-for i in meanings:
+di = ''
+
+for meaning in range(len(meanings)):
     if len(meanings) == 1:
-        print(i)
-    elif i == meanings[0]:
-        a +=str(meanings[1] + meanings[-1]) + ' '
-    elif i == meanings[-1]:
-        a += str(meanings[0] + meanings[-2]) + ' '
-        
-print(a)
+        di += str(meanings[0])
+    else:
+        a = meanings[meaning-1]+meanings[(meaning+1)%len(meanings)]
+        di += str(a) + " "
+print(di)
