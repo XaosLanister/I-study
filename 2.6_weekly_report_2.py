@@ -1,8 +1,10 @@
-meaning = int(input())
-counts = ''
+meaning, answer, meanings = int(input()), '', 1
 
 for number_of_reps in range(meaning + 1):
     for i in range(number_of_reps):
-        counts += str(number_of_reps) + ' '
-print(counts)
-    
+        if meaning >= meanings:
+            meanings += 1
+            answer += str(number_of_reps) + ' '
+        else:
+            break
+print(answer)
