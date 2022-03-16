@@ -5,6 +5,6 @@ while meaning != 'end':
     meaning = input()
     column += 1
 #print (date)
-#print(count)
+#print(column)
 string = len(date[0])
 #print(string)
