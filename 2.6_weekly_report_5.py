@@ -1,12 +1,8 @@
-from statistics import mean
-
-
-a = []
 meaning = int(input())
+c = 0
 
-for i in range(meaning):
-    a.append([0] * meaning)
+a = [[0] * meaning for i in range(meaning)]
+a[0] = [(col + 1) for col in range(meaning)]
+
 for i in a:
-    for j in i:
-        print(i[j], end = " ")
-    print()
+    print(i)
