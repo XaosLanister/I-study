@@ -5,8 +5,8 @@ word = input().lower().split()
 
 
 def counts(word):
-    f = dict(Counter(word))
-    for key,value in f.items():
+    dictWord = dict(Counter(word))
+    for key,value in dictWord.items():
         print(key, value)
 
 
