@@ -4,7 +4,6 @@ def f(meaning):
 
 
 valueStr = int(input())
-counter = 0
 meanings = dict()
 
 for meaning in range(valueStr):
