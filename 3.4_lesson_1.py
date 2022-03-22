@@ -2,13 +2,10 @@ import re
 
 dataSet = open('test.txt')
 file_read = re.split('(\d+)', dataSet.read())
-
-counter = 0
-for i in file_read:
-    if counter < len(file_read):
-        result = i[counter] * i[counter + 1]
-    else:
-        break
-print(result)
-
-
+print(file_read)
+count = 0
+s = ''
+while count < len(file_read):
+    s += str(file_read[count] * int(file_read[count + 1]))
+    count += 2
+    print(s)
