@@ -5,19 +5,14 @@ from collections import Counter
 def main(name):
     dataSet = open(name)
     fileText = Counter((dataSet.read().lower()).split()).most_common()
-    fileText.sort()
     dataSet.close
-    print(fileText)
-    dic = []
+    dic = ''
     for i in fileText:
         if fileText[0][1] == i[1]:
-            dic += i
-    print(*dic)
-main('test.txt')
+            dic += i[0] + ' '+ str(i[1]) + ' '
+    fileOut = open('result.txt', 'w')
+    fileOut.write(dic)
+    fileOut.close 
 
-
-
-
-"""             dic += i
-        else:
-            break    """
+    print(dic)
+main('dataset_3363_3.txt')
