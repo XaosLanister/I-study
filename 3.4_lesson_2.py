@@ -13,6 +13,4 @@ def main(name):
     fileOut = open('result.txt', 'w')
     fileOut.write(dic)
     fileOut.close 
-
-    print(dic)
 main('dataset_3363_3.txt')
