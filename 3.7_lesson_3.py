@@ -24,6 +24,7 @@ date_str = my_str(count_str)
 
 
 def check(date_word, date_str):
-    for i in date_word:
-        print(i)
+    for i in date_str:
+        if i not in date_word:
+            print(i)
 check(date_word, date_str)
