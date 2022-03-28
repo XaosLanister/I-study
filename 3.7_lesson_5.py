@@ -7,9 +7,10 @@ with open('dataset_3380_5.txt') as _:
         lines = lines.strip().split()
         line = int(lines[0])
         if line in average_height.keys():
-            #average_height[line].append(lines[1])
             average_height[line].append(int(lines[2]))
-
-    for i in average_height.values():
-        print(sum(i) / len(i))
+            
+count = 1
     
+for i in average_height.values():
+    print(count, sum(i) / len(i), file = open('result.txt', 'a'))
+    count += 1
